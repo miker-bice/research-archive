@@ -3,6 +3,7 @@ ErrorDocument 403 /error_page/404.php
 
 Options All -Indexes
 
+#Uncomment for down website
 #103.196.139.146
 #RewriteEngine On
 #RewriteBase /
@@ -11,11 +12,14 @@ Options All -Indexes
 #RewriteCond %{REQUEST_URI} !^/maintenance\.html$
 #RewriteRule ^(.*)$ https://lms.ccc.edu.ph/maintenance.html [R=307,L]
 
+#check if files or folder exist
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ - [L,F]
+#if not return 404
 
+#prevent hotlinking , replace referrer for what you use
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{REQUEST_FILENAME} \.(tmp|gif|jpg|jpeg|bmp|zip|rar|mp3|flv|swf|xml|png|php|html|css|js|pdf|woff|woff2|ttf|svg|eot)$	[NC]
@@ -25,7 +29,7 @@ RewriteCond %{HTTP_REFERER} !google\.                         [NC]
 RewriteCond %{HTTP_REFERER} !yahoo\.                          [NC]
 RewriteRule \.(tmp|gif|jpg|jpeg|bmp|zip|rar|mp3|flv|swf|xml|png|php|html|css|js|pdf|woff|woff2|ttf|svg|eot)$ - [F,L]
 
-
+#prevent to access .htaccess
 <Files .htaccess>
 order allow,deny
 deny from all
