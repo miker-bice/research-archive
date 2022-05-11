@@ -6,6 +6,9 @@ Copy or Clone this project.
 
 Import the database (optional)
 
+## For Design and JS > but yu can use your own design (CSS Template)
+- Use bootstrap 4+
+- jQuery
 
 ## File Folder Structures
 - app                 - contain php script for login users
