@@ -1,4 +1,10 @@
 # WEB_CORE
+## To secure website must check code from this files.
+- htaccess - security of file access 
+- global_func.php - user input sanitizing and prevent XSS Attack
+- connect.php - sanitize MYSQL query
+- (include your own CSRF Token and Session Handling) - its important, ## REQUIRED (Pagchineck ko system nyo)
+- All upload folder must be protected using php and htaccess
 
 ## Installation
 
