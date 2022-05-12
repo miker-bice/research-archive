@@ -6,6 +6,7 @@
 - (include your own CSRF Token and Session Handling) - its important, ## REQUIRED (Pagchineck ko system nyo)
 - All upload folder must be protected using php and htaccess
 
+```php
 ## roles variable
 $g_user_role  == array for roles 
 if(!($g_user_role[0] == "TEACHER")){  
@@ -35,6 +36,7 @@ $s_user_id ==> variable for user_id
 $g_user_name ==>  user fullname
 BASE_URL ==> constant for base url (https://localhost
 DOMAIN_PATH ==> access folder absolute path
+```
 
 ## Installation
 
