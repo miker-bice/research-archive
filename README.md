@@ -6,6 +6,36 @@
 - (include your own CSRF Token and Session Handling) - its important, ## REQUIRED (Pagchineck ko system nyo)
 - All upload folder must be protected using php and htaccess
 
+## roles variable
+$g_user_role  == array for roles 
+if(!($g_user_role[0] == "TEACHER")){  
+	header("Location: ".BASE_URL);
+	exit();
+}
+## TEACHER,STUDENT,ADMIN,REGISTRAR,DIRECTOR
+
+if(!($g_user_role[1] == "DIRECTOR")){  
+	header("Location: ".BASE_URL);
+	exit();
+}
+
+### SESSION 
+$session_class->setValue('user_id',$row_teacher['teacher_id']);
+$role = array('TEACHER');
+>> $role[1] = 'DIRECTOR'; if director
+$session_class->setValue('role_id',$roles);
+$session_class->setValue('photo',$row_teacher['location']);
+$session_class->setValue('name',$row_teacher['firstname']." ".$row_teacher['lastname']);
+$session_class->setValue('agent_browser',$agent);
+$fingerprint = $session_class->getValue('fingerprint');
+$session_class->setValue('browser_fingerprint',$fingerprint);
+
+### CONSTANT variable
+$s_user_id ==> variable for user_id
+$g_user_name ==>  user fullname
+BASE_URL ==> constant for base url (https://localhost
+DOMAIN_PATH ==> access folder absolute path
+
 ## Installation
 
 Copy or Clone this project.
