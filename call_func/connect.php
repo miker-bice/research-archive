@@ -84,4 +84,77 @@ function mysqliquery_return($sql_query,$connect ="",$type = MYSQLI_ASSOC){
 	return $rdata;
 }
 
+function  activity_log_new($action){
+	global $db_connect,$session_class;
+	$date_now = date('Y-m-d H:i:s');
+	$s_user_id = $session_class->getValue('user_id');
+	$role_txt = $session_class->getValue('role_id');
+	$fingerprint = $session_class->getValue('browser_fingerprint');
+	$role_id = 0;
+	
+	if($role_txt[0] == "ADMIN"){
+		$role_id = 1;
+	}else if($role_txt[0]  == "REGISTRAR"){
+		$role_id = 2;
+	}
+	if (!empty($s_user_id) AND trim($action) !="") { // may user
+		
+		$insert = "INSERT INTO activity_log( user_id, action, date_log,session_id, user_level) ";
+		$insert .= "VALUES ( '".$s_user_id."', '".escape($db_connect,$action)."','".$date_now."','".$fingerprint."', ".$role_id.") ";
+		
+		error_log($insert);
+		if(mysqli_query($db_connect,$insert)){
+				return true;
+		}
+	}
+	return false;
+}
+
+
+function  user_log($action,$agents=array()){
+	global $db_connect,$session_class;
+	$date_now = date('Y-m-d H:i:s');
+	$s_user_id = $session_class->getValue('user_id');
+	$fingerprint = $session_class->getValue('browser_fingerprint');
+	$ip =get_ip();
+	
+	$device = array();
+	$device = json_encode($agents);
+
+	if (!empty($s_user_id) AND trim($action) !="") { // may user
+		if($action == "LOGIN"){
+			$insert = "INSERT INTO user_log( login_date, action,user_id,session_id,ip_address,device) ";
+			$insert .= "VALUES ( '".$date_now."','".$action."', '".$s_user_id."','".$fingerprint."','".$ip."','".escape($db_connect,$device)."') ";
+			if(mysqli_query($db_connect,$insert)){
+					return true;
+			}
+		}else if($action =='LOGOUT'){
+			$update = "UPDATE user_log set logout_date = NOW() WHERE session_id = '".$fingerprint."'";
+			if(mysqli_query($db_connect,$update)){
+					return true;
+			}
+
+		}
+	}
+	return false;
+}
+
+function get_profile_pic($user_id,$field,$table){
+	global $db_connect;
+	$path ="";
+	if(trim($user_id)=="" ||  trim($field)=="" || trim($table)==""){
+		return "";
+	}
+	$query = "SELECT location FROM ".$table." WHERE ".$field ." = '".$user_id."' LIMIT 1";
+	if($query=mysqli_query($db_connect,$query)){
+	    $num=mysqli_num_rows($query);
+	    if($num !=0){
+	        if($data=mysqli_fetch_array($query,MYSQLI_ASSOC)){
+	        	$path = empty($data['location']) ? "" : BASE_URL.$data['location'];
+	        }
+	    }
+	}
+	
+	return $path;
+}
 ?>

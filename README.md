@@ -44,6 +44,10 @@ Copy or Clone this project.
 
 Import the database (optional)
 
+### Login
+- Username: ituser
+- Password: admin
+
 ## For Design and JS > but yu can use your own design (CSS Template)
 - Use bootstrap 4+
 - jQuery

@@ -62,7 +62,7 @@ define('PASSWORD_HELPER' , DOMAIN_PATH.'/call_func/password_helper.php');
 
 //global var
 define('DEFAULT_SESSION', 'web_session');
-define('SALT', '1234TREWPOIUYT'); //change me
+define('SALT', '1234TREWPOIUYT_'); //change me
 define('SESSION_CONFIG', array('name' => DEFAULT_SESSION,'path' => '/','domain' => '','secure' => false,'bits' => 4,'length' => 32,'hash' => 'sha256','decoy' => true,'min' => 60,'max' => 600,'debug' => false));
 
 
