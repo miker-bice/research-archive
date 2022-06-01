@@ -67,21 +67,28 @@ if($browser_attempt >=30){
             <div class="content-page">
                 <div class="content">
                     <!-- BEGIN PlACE PAGE CONTENT HERE -->
-                  <div class="row justify-content-md-center">
+                  <!-- <div class="row justify-content-md-center">
                         <div class="col-xs-12  col-sm-12 col-lg-6" >
                             <div class="card" style="background:#438ff4;color:white;">
                                 <div class="card-body" style="padding:10px;">
-                                    <h4 class="page-title"> <img src="<?php echo BASE_URL;?>images/logo-light.png" alt="" height="50"><span style="font-size:20pt;font-family:inkfree;"> SYSTEM NAME</span></h4>
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-                    </div>
+                                    <h4 class="page-title"> <img src="<?php echo BASE_URL;?>images/logo-light.png" alt="" height="50"><span style="font-size:20pt;font-family:inkfree;" class="ml-2"> Research Archiving System</span></h4>
+                                </div> end card body
+                            </div> end card
+                        </div>end col
+                    </div> -->
                         <div class="row justify-content-md-center" >
                             <div class="col-xs-12 col-sm-12 col-lg-6">
-                                <div class="card">
+                                <di class="card">
+									<div class="card-head text-center">
+										<div class="card-body">
+                                   		 <h4 class="page-title"> <img src="<?php echo BASE_URL;?>images/logo-light.png" alt="" height="100"></h4>
+											<h2 style="font-size:20pt;font-weight:700;">City College of Calamba</h2>
+											<h4>Research Archiving System</h4>
+                               		 	</div>
+									</div>
                                     <div class="card-body">
 										<form class="" name='login_form' id="login_form" action="<?php echo BASE_URL;?>login.php"  method="POST">
-										<h3 id="log_title">SIGN-IN</h3>
+										<!-- <h3 id="log_title">SIGN-IN</h3> -->
 											<div class="row">
 												
 												<div class="form-group col-xs-12 col-sm-12 col-lg-12">
@@ -97,13 +104,16 @@ if($browser_attempt >=30){
 													<span style="font-size:10pt;">Login Attempts: <?php echo $login_attempt;?></span>
 												</div>
 												<div class="form-group col-xs-12 col-sm-12 col-lg-12" id="forgotlogin">
-													<a href="#" id="forgot_action"> <i class="fas fa-question-circle"></i><span> FORGOT PASSWORD</span> </a>
+													<a href="#" id="forgot_action"> <i class="fas fa-question-circle text-primary"></i><span style="font-weight:600;" class="text-primary"> FORGOT PASSWORD</span> </a>
 												</div>
 												<div class="form-group col-xs-12 col-sm-12 col-lg-12" id="backlogin" style="display:none;">
 													<a href="#" id="back_login"> <i class="fas fa-chevron-left"></i><span> BACK TO LOGIN</span> </a>
 												</div>
 												<div class="form-group col-xs-12 col-sm-12 col-lg-12">
-													<button type="submit" id="btn_submit" name="submit" value="login" class="btn btn-primary">LOGIN</button> 
+													<button type="submit" id="btn_submit" name="submit" value="login" class="btn btn-primary btn-block ">LOGIN</button> 
+												</div>
+												<div class="form-group col-xs-12 col-sm-12 col-lg-12" id="registerHere">
+													<p style="font-weight:700;">Don't have an account yet? <a href="#" class="text-primary">Register Here</a></p>
 												</div>
 												 <?php echo $csrf->input('token_login_admin_form','token_login_admin_form',3600,1); ?>
 											 </div>

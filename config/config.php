@@ -9,7 +9,7 @@
  Description : Configuration
  =================================================================
 **/
-$envi = 'DEV';
+$envi = 'PROD';
 $before_memory = 0;
 //default settings values
 $config['filesize_limit'] = 20971520;//50000000;//20MB FILE UPLOAD LIMIT

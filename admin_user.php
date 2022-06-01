@@ -647,8 +647,13 @@ $(document).on({
 	}    
 });
 
+
+success_notif('<b>tag</b>');
+
+
 })();
 <?php 
+
     $msg = $session_class->getValue('success');
     if(isset($msg) AND $msg !=""){
           echo "success_notif('".$msg."');";

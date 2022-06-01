@@ -33,8 +33,11 @@ $to_encode=array();
 $output="";
 $total_query = 0;
 
+
+##change me
 $dbfield = array('id_no','CONCAT(firstname," ",lastname) as name','username','user_role','firstname','lastname','user_id','email_address'); // need iset based sa table columns
 
+##change
 $dborig = array('id_no','name','username','user_role','firstname','lastname','user_id','email_address');
 
 if(isset($_GET['filters'])){
@@ -107,6 +110,7 @@ if(isset($_GET['page']) AND is_digit($_GET['page'])){
 $start_no = ($start >= $total_query) ? $total_query : $start;
 
 $field_query = implode(',',$dbfield);
+##chngae
 $sql_conds = (empty($sql_where)) ? '' : 'WHERE '.$sql_where; // ichange based sa need
 $default_query ="SELECT ".$field_query." FROM ".$table_name." ".$sql_conds." ORDER BY ".$orderby;
 $limit=" LIMIT ". $start_no.",".$query_limit; 
