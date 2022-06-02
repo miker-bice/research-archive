@@ -67,16 +67,8 @@ if($browser_attempt >=30){
             <div class="content-page">
                 <div class="content">
                     <!-- BEGIN PlACE PAGE CONTENT HERE -->
-                  <!-- <div class="row justify-content-md-center">
-                        <div class="col-xs-12  col-sm-12 col-lg-6" >
-                            <div class="card" style="background:#438ff4;color:white;">
-                                <div class="card-body" style="padding:10px;">
-                                    <h4 class="page-title"> <img src="<?php echo BASE_URL;?>images/logo-light.png" alt="" height="50"><span style="font-size:20pt;font-family:inkfree;" class="ml-2"> Research Archiving System</span></h4>
-                                </div> end card body
-                            </div> end card
-                        </div>end col
-                    </div> -->
-                        <div class="row justify-content-md-center" >
+                  
+                        <div class="row justify-content-md-center mt-5" >
                             <div class="col-xs-12 col-sm-12 col-lg-6">
                                 <di class="card">
 									<div class="card-head text-center">

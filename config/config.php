@@ -55,6 +55,8 @@ define('CONNECT_PATH' , DOMAIN_PATH.'/call_func/connect.php');
 define('VALIDATOR_PATH' , DOMAIN_PATH.'/call_func/validator.php');
 define('GLOBAL_FUNC' , DOMAIN_PATH.'/call_func/global_func.php');
 define('FOOTER_PATH' , DOMAIN_PATH.'/call_func/footer.php');
+define('MAIN_NAVBAR' , DOMAIN_PATH.'../student_app/navbar.php');
+define('TOPBAR' , DOMAIN_PATH.'../student_app/topbar.php');
 ##define('MENU' , DOMAIN_PATH.'/admin/menu.php');
 define('GRADE_MODULE' , DOMAIN_PATH.'/call_func/compute_grade.php');
 define('ISLOGIN' , DOMAIN_PATH.'/call_func/islogin.php');
