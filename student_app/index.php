@@ -31,7 +31,7 @@ $csrf = new CSRF($session_class);
 
     <!-- insert here the main content of the page -->
     <div class="main-content container-fluid">
-        <h1>this is the main page</h1>
+    <?php  include MAIN_CONTENT; ?>
     </div>
     
     <!-- insert here the footer -->
