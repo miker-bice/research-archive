@@ -12,33 +12,13 @@
     <div class="archive-form ">
         <hr class="bg-primary">
         <div class="d-flex">
-            <select id="filter-field" class="form-control">
-                <option></option>
-                <option value="name">Name</option>
-                <option value="progress">Progress</option>
-                <option value="gender">Gender</option>
-                <option value="rating">Rating</option>
-                <option value="col">Favourite Colour</option>
-                <option value="dob">Date Of Birth</option>
-                <option value="car">Drives</option>
-                <option value="function">Drives & Rating < 3</option>
-            </select>
+            <input class="form-control mx-2" type="text" placeholder="Title">
 
-            <select id="filter-type" class="form-control">
-                <option value="=">=</option>
-                <option value="<">
-                    << /option>
-                <option value="<=">
-                    <=< /option>
-                <option value=">">></option>
-                <option value=">=">>=</option>
-                <option value="!=">!=</option>
-                <option value="like">like</option>
-            </select>
+            <input class="form-control mx-2" type="text" placeholder="Year Level">
 
-            <input class="form-control" id="filter-value" type="text" placeholder="value to filter">
+            <input class="form-control mx-2" type="text" placeholder="Department">
 
-            <button class="btn btn-primary" id="filter-clear">Clear Filter</button>
+            <button class="btn btn-primary mx-2" id="filter-clear">Clear Filter</button>
         </div>
 
         <div id="example-table"></div>
