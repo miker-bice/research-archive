@@ -30,12 +30,12 @@ $csrf = new CSRF($session_class);
     <?php  include MAIN_NAVBAR; ?>
 
     <!-- insert here the main content of the page -->
-    <div class="main-content container-fluid">
-    <?php  include MAIN_CONTENT; ?>
+    <div class="main-content mt-3 container-fluid">
+        <?php  include MAIN_CONTENT; ?>
     </div>
     
     <!-- insert here the footer -->
-    <?php  include FOOTER_PATH; ?>
+    <?php  include BOTTOM_BAR; ?>
     
 </body>
 <?php include DOMAIN_PATH."/app/global/include_bottom.php"; ?>
