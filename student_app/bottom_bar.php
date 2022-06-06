@@ -21,10 +21,10 @@
                 </div>
 
                 <div id="sp-bottom1" class="col-sm-6">
-                    <div class="sp-column text-center">
-                        <div class="ccc-logo">
+                    <div class="sp-column text-center pl-4">
+                        <div class="ccc-logo text-left">
                             <h4>City College of Calamba</h4>
-                            <img src="<?php echo BASE_URL;?>images/logo-light.png" alt="ccc-logo" width="100">
+                            <img src="<?php echo BASE_URL;?>images/logo-light.png" alt="ccc-logo" width="120">
                         </div>
                     </div>
                 </div>
