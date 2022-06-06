@@ -43,10 +43,10 @@ $csrf = new CSRF($session_class);
 <script>
     //Define some test data
 var cheeseData = [
-    {id:1, type:"Brie", rind:"mould", age:"4 weeks", color:"white", image:"brie.jpg"},
-    {id:2, type:"Cheddar", rind:"none", age:"1 year", color:"yellow", image:"cheddar.jpg"},
-    {id:3, type:"Gouda", rind:"wax", age:"6 months", color:"cream", image:"gouda.jpg"},
-    {id:4, type:"Swiss", rind:"none", age:"9 months", color:"yellow", image:"swiss.jpg"},
+    {id:1, type:"Brie", rind:"mould", age:"10 weeks", color:"white", image:"brie.jpg", link:"id"},
+    {id:2, type:"Cheddar", rind:"none", age:"1 year", color:"yellow", image:"cheddar.jpg", link:"id"},
+    {id:3, type:"Gouda", rind:"wax", age:"6 months", color:"cream", image:"gouda.jpg", link:"id"},
+    {id:4, type:"Swiss", rind:"none", age:"9 months", color:"yellow", image:"swiss.jpg", link:"id"},
 ]
 
 //define Tabulator
@@ -76,10 +76,10 @@ var table = new Tabulator("#example-table", {
         rowTabletr = document.createElement("tr");
 
         //add image on left of row
-        cellContents = "<td><img src='/sample_data/row_formatter/" + data.image + "'></td>";
+        cellContents = "<td  width='300'><img src='/sample_data/row_formatter/" + data.image + "' class='img-fluid' alt='cover-img'></td>";
 
         //add row data on right hand side
-        cellContents += "<td><div><strong>Type:</strong> " + data.type + "</div><div><strong>Age:</strong> " + data.age + "</div><div><strong>Rind:</strong> " + data.rind + "</div><div><strong>Colour:</strong> " + data.color + "</div></td>"
+        cellContents += "<td style='padding: 1.5rem 0; padding-left: .75rem;'><div><strong>Title:</strong> " + data.type + "</div><div><strong>Age:</strong> " + data.age + "</div><div><strong>Rind:</strong> " + data.rind + "</div><div><strong>Colour:</strong> " + data.color + "</div><a href= " + data.link + ">Read more</a>" + "</td>"
 
         rowTabletr.innerHTML = cellContents;
 
