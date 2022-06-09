@@ -31,7 +31,7 @@ $csrf = new CSRF($session_class);
 
     <!-- insert here the main content of the page -->
     <div class="main-content mt-3 container">
-        <h2>this is the upload research page</h2>
+        <?php  include UPLOAD_ARCHIVE; ?>
     </div>
     
     <!-- insert here the footer -->
