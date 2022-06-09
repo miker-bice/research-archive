@@ -22,7 +22,7 @@ $csrf = new CSRF($session_class);
     ?>
 
 </head>
-<body class="bg-white">
+<body class="bg-white py-0">
     <!-- insert here the topbar -->
     <?php  include TOPBAR; ?>
 
