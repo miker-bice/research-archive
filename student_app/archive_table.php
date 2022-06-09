@@ -6,7 +6,7 @@
             <h2 class="text-primary">Archive List</h2>
         </div>
         <div class="upload-btn">
-            <button class="btn btn-primary">Upload File</button>
+            <a href="./upload_archive.php" class="btn text-white btn-primary">Upload File</a>
         </div>
     </div>
     <div class="archive-form ">
