@@ -30,6 +30,7 @@
             </div>
 
             <!-- add the rich text editor here (use tinymce) -->
+            <div id="header_text"></div>
             
         </form>
 

@@ -40,3 +40,30 @@ $csrf = new CSRF($session_class);
 </body>
 <?php include DOMAIN_PATH."/app/global/include_bottom.php"; ?>
 </html>
+
+<script>
+    // initialize summernote for ehader
+    var div_header = document.getElementById('header_text');
+    var div_header_editor = $(div_header).summernote({
+        height: 200,
+        dialogsFade: true,
+        prettifyHtml: true,
+        width: '100%',	
+        toolbar: [
+            // [groupName, [list of button]]
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['strikethrough', 'superscript', 'subscript']],
+            ['fontsize', ['fontsize']],
+            ['color', ['backcolor','forecolor']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['insert',['picture','link','video','hr','math']],
+            ['table', ['table']],
+            ['view', [ 'undo','redo','help']],
+            ['height', ['height']]
+        ]
+    });	
+    var header_text = $(div_header).summernote('code');
+    $.post("url/to/process.php",{header:header_text,date:variable},function(){
+
+    })
+</script>
