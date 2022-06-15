@@ -15,7 +15,7 @@
             <br>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem illo, tempore atque expedita ipsa optio illum similique minima voluptas sit facilis sapiente temporibus facere inventore nulla pariatur quam blanditiis itaque suscipit quae molestiae. Eum asperiores corporis nihil voluptatibus, culpa nam officiis ipsa iste, nemo exercitationem, quia sint soluta neque unde.
         </h5>
-        <a href="#" class="btn btn-lg btn-primary btn-block my-5">BROWSE ARCHIVE</a>
+        <a href="./archive.php" class="btn btn-lg btn-primary btn-block my-5">BROWSE ARCHIVE</a>
     </div>
    
 

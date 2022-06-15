@@ -4,6 +4,7 @@ require GLOBAL_FUNC;
 require CL_SESSION_PATH;
 require CONNECT_PATH;
 require VALIDATOR_PATH; // library for form validation
+require ISLOGIN;// check kung nakalogin
 
 
 $g_user_role = $session_class->getValue('role_id');
@@ -24,7 +25,7 @@ $csrf = new CSRF($session_class);
 </head>
 <body class="bg-white py-0">
     <!-- insert here the topbar -->
-    <?php  include TOPBAR; ?>
+    <?php include DOMAIN_PATH."/app/global/top_bar.php"; ?>     <!--topbar -->
 
     <!-- insert here the navbar -->
     <?php  include MAIN_NAVBAR; ?>

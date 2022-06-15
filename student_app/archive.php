@@ -132,5 +132,6 @@ tabulatorHeaderFilter.classList.add("form-control");
 console.log(tabulatorHeaderFilter);
 
 
+
 </script>
 </html>
