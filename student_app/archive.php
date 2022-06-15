@@ -26,11 +26,9 @@ $csrf = new CSRF($session_class);
 <style>
 
     .tabulator-header-filter input[type=search]{
-        border: none;
-        border-radius: 5px;
-        background-color: pink;
-        padding: 2rem 0;
+        margin: 0.5rem 0;
     }
+
 </style>
 
 <body class="bg-white py-0">
@@ -54,8 +52,8 @@ $csrf = new CSRF($session_class);
 <script>
     //Define some test data
 var researchData = [
-    {id: 0, title:"Star Wars Visions: Ronin", authors:"Juan Dela Cruz", abstract:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo amet natus facilis blanditiis maxime repellendus earum qui eum error quae.", department:"Department", publishYear: "2022", image: "SWRonin-Cover.webp"},
-    {id: 1, title:"Star Wars Visions: Ronin", authors:"Juan Dela Cruz", abstract:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo amet natus facilis blanditiis maxime repellendus earum qui eum error quae.", department:"Department", publishYear: "2022", image: "SWRonin-Cover.webp"},
+    {id: 0, title:"Star Wars Visions: Ronin", authors:"Emma Mieko Candon", abstract:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo amet natus facilis blanditiis maxime repellendus earum qui eum error quae.", department:"Department of Computer and Informatics", publishYear: "2022", image: "SWRonin-Cover.webp"},
+    {id: 1, title:"George Orwell: 1984", authors:"George Orwell", abstract:"Nineteen Eighty-Four is a dystopian social science fiction novel and cautionary tale written by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.", department:"Department of Computer and Informatic", publishYear: "2021", image: "george-orwell-1984.jpg"},
     {id: 2, title:"Star Wars Visions: Ronin", authors:"Juan Dela Cruz", abstract:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo amet natus facilis blanditiis maxime repellendus earum qui eum error quae.", department:"Department", publishYear: "2022", image: "SWRonin-Cover.webp"},
     {id: 3, title:"Star Wars Visions: Ronin", authors:"Juan Dela Cruz", abstract:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo amet natus facilis blanditiis maxime repellendus earum qui eum error quae.", department:"Department", publishYear: "2022", image: "SWRonin-Cover.webp"},
 ]
@@ -78,17 +76,18 @@ var table = new Tabulator("#example-table", {
     columns:[
         {title:"Cover", field:"image", formatter:function(cell, formatterParams, onRendered){
 
-    return "<div class='p-2'><img class='infoImage img-fluid' src='<?php echo BASE_URL."images/research-covers/"; ?>" + cell.getValue() + "'></div>";
-}, sorter:"string", headerFilter:true, headerFilterPlaceholder:"Title", hozAlign:"center"},
+            return "<div class='p-2'><img class='img-fluid' src='<?php echo BASE_URL."images/research-covers/"; ?>" + cell.getValue() + "'></div>";
+            },},
         {title:"Title", field:"title", sorter:"string", formatter:function(cell, formatterParams, onRendered){
-    //cell - the cell component
-    //formatterParams - parameters set for the column
-    //onRendered - function to call when the formatter has been rendered
-    
-    return cell.getValue(); //return the contents of the cell;
-},},
+            //cell - the cell component
+            //formatterParams - parameters set for the column
+            //onRendered - function to call when the formatter has been rendered
+            
+            return cell.getValue(); //return the contents of the cell;
+            }, sorter:"string", headerFilter:true, headerFilterPlaceholder:"Title", hozAlign:"center"},
         {title:"Authors", field:"authors", sorter:"string"},
         {title:"Abstract", field:"abstract",formatter:"textarea", sorter:"string"},
+        {title:"Academic Year", field:"publishYear",formatter:"textarea", sorter:"string"},
     ],
     // rowFormatter:function(row){
     //     var element = row.getElement(),
@@ -126,6 +125,11 @@ var table = new Tabulator("#example-table", {
     },
 
 });
+
+// adding bootstrap classes to the tabulator elements
+const tabulatorHeaderFilter = document.querySelector(".tabulator-header-filter").querySelector("input");
+tabulatorHeaderFilter.classList.add("form-control");
+console.log(tabulatorHeaderFilter);
 
 
 </script>

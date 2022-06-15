@@ -4,17 +4,18 @@
 </div>
 
 <!-- this is the content -->
-<div class="main-container mt-2 text-center container" style="margin-bottom: 5rem;">
-    <h3>Welcome to</h3>
+<div class="main-container mt-2 py-4 text-center container" style="margin-bottom: 5rem;">
     <h2>CCC Research Archiving System</h2>
-    <hr class="my-5 bg-primary" width="200">
+    <hr class="my-4 bg-primary" width="200">
     <div class="message-body mx-auto" style="padding: 0 3rem;">
-        <h5 class="welcome-message text-justify">
+        <h5 class="welcome-message text-secondary text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae laudantium cum assumenda mollitia commodi blanditiis ipsa enim placeat aut. Maiores repellendus in fugit quo voluptates facilis dolor ducimus corrupti odit doloremque sint accusantium illum, natus est labore adipisci, quas, error iste non eos magni veritatis dolore! Vero laborum distinctio architecto.
+            <br>
             <br>
             <br>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem illo, tempore atque expedita ipsa optio illum similique minima voluptas sit facilis sapiente temporibus facere inventore nulla pariatur quam blanditiis itaque suscipit quae molestiae. Eum asperiores corporis nihil voluptatibus, culpa nam officiis ipsa iste, nemo exercitationem, quia sint soluta neque unde.
         </h5>
+        <a href="#" class="btn btn-lg btn-primary btn-block my-5">BROWSE ARCHIVE</a>
     </div>
    
 
