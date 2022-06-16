@@ -28,9 +28,14 @@
                     <option>Department of Arts, Sciences and Teacher Education</option>
                 </select>
             </div>
-
             <!-- add the rich text editor here (use tinymce) -->
+            <label for="header_text">Research Abstract</label>
             <div id="header_text"></div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Authors</label>
+                <input type="textarea" class="form-control" id="exampleFormControlInput1" placeholder="Juan Dela Cruz">
+            </div>
             
         </form>
 
