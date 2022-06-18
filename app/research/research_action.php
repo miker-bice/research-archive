@@ -15,6 +15,7 @@ require CL_SESSION_PATH;
 require CONNECT_PATH;
 require ISLOGIN;
 
+
 if (!(isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')){ 
 	include HTTP_401;
 	exit();
@@ -23,6 +24,7 @@ if (!(isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_R
 if(isset($_POST['action'])){
     if($_POST['action']=="save")
     {
+        // edit this to accomodate the submission of research
         $fiscalYear = escape($db_connect,$_POST['fiscalYear']);
         $programId = escape($db_connect,$_POST['program_id']);
         $title = escape($db_connect,$_POST['title']);
