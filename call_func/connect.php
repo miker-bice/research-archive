@@ -10,7 +10,7 @@ if (mysqli_connect_errno()){
   exit();
 }
 
-function escape($con = "",$str){
+function escape($con = "",$str=""){
 	global $db_connect;
 	$string=mysqli_real_escape_string($db_connect,$str);
 	return $string;

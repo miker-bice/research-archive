@@ -75,8 +75,7 @@ var table = new Tabulator("#example-table", {
     },
     data:researchData,
     columns:[
-        {title:"Cover", field:"image", formatter:function(cell, formatterParams, onRendered){
-
+        {title:"Cover", field:"image", headerSort:false,formatter:function(cell, formatterParams, onRendered){
             return "<div class='p-2'><img class='img-fluid' src='<?php echo BASE_URL."images/research-covers/"; ?>" + cell.getValue() + "'></div>";
             },},
         {title:"Title", field:"title", sorter:"string", formatter:function(cell, formatterParams, onRendered){
@@ -85,10 +84,22 @@ var table = new Tabulator("#example-table", {
             //onRendered - function to call when the formatter has been rendered
             
             return cell.getValue(); //return the contents of the cell;
-            }, sorter:"string", headerFilter:true, headerFilterPlaceholder:"Title", hozAlign:"center"},
-        {title:"Authors", field:"authors", sorter:"string"},
-        {title:"Abstract", field:"abstract",formatter:"textarea", sorter:"string"},
-        {title:"Academic Year", field:"publishYear",formatter:"textarea", sorter:"string"},
+            }, sorter:"string", headerSort:false, headerFilter:true, headerFilterPlaceholder:"Title", hozAlign:"center"},
+        {title:"Authors", field:"authors", sorter:"string", formatter:function(cell, formatterParams, onRendered){
+            //cell - the cell component
+            //formatterParams - parameters set for the column
+            //onRendered - function to call when the formatter has been rendered
+            
+            return cell.getValue(); //return the contents of the cell;
+            }, sorter:"string", headerSort:false, headerFilter:true, headerFilterPlaceholder:"Authors", hozAlign:"center"},
+        {title:"Abstract", field:"abstract",formatter:"textarea", headerSort:false, sorter:"string"},
+        {title:"Academic Year", field:"publishYear",formatter:"textarea", formatter:function(cell, formatterParams, onRendered){
+            //cell - the cell component
+            //formatterParams - parameters set for the column
+            //onRendered - function to call when the formatter has been rendered
+            
+            return cell.getValue(); //return the contents of the cell;
+            }, sorter:"string", headerSort:false,  headerFilter:true, headerFilterPlaceholder:"Academic Year", hozAlign:"center"},
     ],
     // rowFormatter:function(row){
     //     var element = row.getElement(),
@@ -128,9 +139,12 @@ var table = new Tabulator("#example-table", {
 });
 
 // adding bootstrap classes to the tabulator elements
-const tabulatorHeaderFilter = document.querySelector(".tabulator-header-filter").querySelector("input");
-tabulatorHeaderFilter.classList.add("form-control");
-console.log(tabulatorHeaderFilter);
+const tabulatorHeaderFilter = document.querySelectorAll('input[type="search"]');
+tabulatorHeaderFilter.forEach(input => {
+    input.classList.add("form-control");
+    console.log(input);
+});
+
 
 
 

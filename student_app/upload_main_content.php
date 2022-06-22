@@ -6,19 +6,19 @@
             <h2 class="text-primary">Submit Research</h2>
         </div>
         <div class="upload-btn">
-            <a href="./upload_archive.php" class="btn text-white btn-primary">Upload File</a>
+            
         </div>
     </div>
     <div class="archive-form ">
         <hr class="bg-primary">
-        <form>
+        <div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Research Title</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sample Research Title">
+                <label for="research-title">Research Title</label>
+                <input type="text" class="form-control" id="research-title" name="research-title" placeholder="Sample Research Title">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Academic Year</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="2022">
+                <label for="research-year">Academic Year</label>
+                <input type="text" class="form-control" id="research-year" name="research-year" placeholder="2022">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">College Department</label>
@@ -29,15 +29,24 @@
                 </select>
             </div>
             <!-- add the rich text editor here (use tinymce) -->
-            <label for="header_text">Research Abstract</label>
-            <div id="header_text"></div>
+            <label for="research-abstract">Research Abstract</label>
+            <div id="header_text" name="research-abstract" id="research-abstract"></div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1">Authors</label>
-                <input type="textarea" class="form-control" id="exampleFormControlInput1" placeholder="Juan Dela Cruz">
+                <label for="research-authors">Authors</label>
+                <input type="textarea" class="form-control" name="research-authors" id="research-authors" placeholder="Juan Dela Cruz">
+            </div>
+
+            <div class="form-group">
+                <label for="research-authors">Upload</label>
+                <br>
+                <div id="traditional-uploader"></div>
             </div>
             
-        </form>
+            <div>
+                <button id="submit-research" class="btn text-white btn-primary">Upload</button>
+            </div>
+        </div>
 
         <div class="mt-3" id="example-table"></div>
     </div>
