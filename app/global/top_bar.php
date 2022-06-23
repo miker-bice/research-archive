@@ -2,7 +2,7 @@
 <?php
 $badge_count = '';
 ?> 
-<div class="navbar-custom topnav-navbar topnav-navbar-dark">
+<div class="navbar-custom topnav-navbar topnav-navbar-dark bg-primary">
     <div class="container-fluid">
 
         <!-- LOGO -->

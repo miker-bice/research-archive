@@ -122,7 +122,9 @@ if($browser_attempt >=30){
     </div>
     <!-- all the js files -->
     <!-- bundle -->
+	
 <?php  include FOOTER_PATH; ?>
+
 </body>
 <?php include DOMAIN_PATH."/app/global/include_bottom.php"; ?>
 <script>

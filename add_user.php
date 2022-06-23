@@ -41,7 +41,7 @@ echo "<option value='".$id."' ".$selected .">".$text."</option>";
 
 <div class="form-group">
 <label>Last Name</label>
-<input type="text" class="form-control" name="lastname" value="<?php echo $input['lastname'];?>" required="">
+<input type="text" class="form-control" name="lastname" value="<?php echo $input['lastname'];?>" required>
 </div>
 <div class="form-group">
 <label>Email Address</label>

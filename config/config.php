@@ -9,7 +9,7 @@
  Description : Configuration
  =================================================================
 **/
-$envi = 'PROD';
+$envi = 'DEV';
 $before_memory = 0;
 //default settings values
 $config['filesize_limit'] = 20971520;//50000000;//20MB FILE UPLOAD LIMIT
@@ -60,6 +60,7 @@ define('TOPBAR' , DOMAIN_PATH.'../student_app/topbar.php');
 define('BOTTOM_BAR' , DOMAIN_PATH.'../student_app/bottom_bar.php');
 define('MAIN_CONTENT' , DOMAIN_PATH.'../student_app/main_content.php');
 define('ARCHIVE_TABLE' , DOMAIN_PATH.'../student_app/archive_table.php');
+define('UPLOAD_ARCHIVE' , DOMAIN_PATH.'../student_app/upload_main_content.php');
 ##define('MENU' , DOMAIN_PATH.'/admin/menu.php');
 define('GRADE_MODULE' , DOMAIN_PATH.'/call_func/compute_grade.php');
 define('ISLOGIN' , DOMAIN_PATH.'/call_func/islogin.php');

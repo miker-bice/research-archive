@@ -23,3 +23,8 @@
 <noscript>
 <div id="noscript-warning">System works best with JavaScript enabled</div>
 </noscript>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>

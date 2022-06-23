@@ -61,7 +61,7 @@ if(!($g_user_role[0] == "ADMIN")){
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-
+                                        <!-- insert content here -->
                                     </div>
                                 </div>
 
