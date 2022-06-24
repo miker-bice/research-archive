@@ -8,7 +8,7 @@ require ISLOGIN;// check kung nakalogin
 
 
 $g_user_role = $session_class->getValue('role_id');
-include "redirect.php";
+// include "redirect.php";
 
 $csrf = new CSRF($session_class); 
 

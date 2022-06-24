@@ -8,7 +8,7 @@ require ISLOGIN;// check kung nakalogin
 
 
 $g_user_role = $session_class->getValue('role_id');
-include "redirect.php";
+// include "redirect.php";
 
 $csrf = new CSRF($session_class); 
 
@@ -142,7 +142,7 @@ var table = new Tabulator("#example-table", {
 const tabulatorHeaderFilter = document.querySelectorAll('input[type="search"]');
 tabulatorHeaderFilter.forEach(input => {
     input.classList.add("form-control");
-    console.log(input);
+    // console.log(input);
 });
 
 

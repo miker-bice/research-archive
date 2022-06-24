@@ -82,7 +82,7 @@ if(!($g_user_role[0] == "ADMIN")){
 </body>
 <?php include DOMAIN_PATH."/app/global/include_bottom.php"; ?>
 <script>
-addClass(document.getElementById('student_link'),'active');
+    // addClass(document.getElementById('student_link'),'active');
 <?php
 		$msg_success =$session_class->getValue('success');
     	if(isset($msg_success) AND $msg_success !=""){
